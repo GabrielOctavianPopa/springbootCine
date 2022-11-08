@@ -24,7 +24,7 @@ public class CineController {
         return cineService.getAllPeliculas();
     }
 
-    @PostMapping(path = "/add-cinema-rooms") // Map ONLY POST Requests
+    @PostMapping(path = "/add-cinema-room") // Map ONLY POST Requests
     public @ResponseBody String addNewSala(@RequestBody SalaCine sala) {
         cineService.addSala(sala);
         return "Saved";
