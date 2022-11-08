@@ -1,23 +1,32 @@
 package cine.POJO;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
+@Table(name = "peliculas")
 @Getter
 @Setter
-public class Pelicula {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Pelicula implements Serializable {
     @Id
+    @Column(name = "IdPelicula")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @Column(name = "Titulo")
     private String titulo;
+    @Column(name = "Director")
     private String director;
+    @Column(name = "Año")
     private String año;
+    @Column(name = "Duracion")
     private String duracion;
-    private String categoria;
+    @Column(name = "Genero")
+    private String Genero;
 }

@@ -9,20 +9,22 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "salas")
+@Table(name = "sesiones")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SalaCine implements Serializable {
+public class Sesion implements Serializable {
     @Id
-    @Column(name = "IdSala")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "IdSession")
     private Integer id;
-    @Column(name = "Nombre")
-    private String nombre;
-    @Column(name = "Ubicacion")
-    private String ubicacion;
-    @Column(name = "Capacidad")
-    private String capacidad;
+    @Column(name = "Hora")
+    private String hora;
+    @Column(name = "Fecha")
+    private String fecha;
+    @Column(name = "IdSala")
+    private String sala;
+    @Column(name = "IdPelicula")
+    private String pelicula;
 }
