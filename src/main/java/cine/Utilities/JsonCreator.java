@@ -19,7 +19,7 @@ public class JsonCreator {
 
         switch (opcion) {
             case 1:
-                String titulo, director, año, duracion, categoria;
+                String titulo, director, año, duracion, genero;
                 System.out.print("¿Cuántas elemetos quieres crear?: ");
                 auxGenerator = sc.nextInt();
 
@@ -27,9 +27,9 @@ public class JsonCreator {
                     // Generar datos aleatorios
                     titulo = faker.book().title();
                     director = faker.book().author();
-                    año = String.valueOf(faker.number().numberBetween(1800, 2022));
+                    año = String.valueOf(faker.number().numberBetween(1920, 2022));
                     duracion = String.valueOf(faker.number().numberBetween(60, 240));
-                    categoria = faker.book().genre();
+                    genero = faker.book().genre();
 
                     //añadir pelicula a la lista con el formato de un json correcto
                     elementos.add("{\n" +
@@ -37,7 +37,7 @@ public class JsonCreator {
                             "    \"director\": \"" + director + "\",\n" +
                             "    \"año\": \"" + año + "\",\n" +
                             "    \"duracion\": \"" + duracion + "\",\n" +
-                            "    \"categoria\": \"" + categoria + "\"\n" +
+                            "    \"genero\": \"" + genero + "\"\n" +
                             "}"
                     );
                 }
