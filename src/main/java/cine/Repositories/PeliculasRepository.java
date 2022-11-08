@@ -1,7 +1,7 @@
-package cine.repositorios;
+package cine.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import cine.pojos.Pelicula;
+import cine.POJO.Pelicula;
 import org.springframework.stereotype.Repository;
 
 @Repository

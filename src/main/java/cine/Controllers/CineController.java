@@ -1,8 +1,8 @@
-package cine.controladores;
+package cine.Controllers;
 
-import cine.servicios.CineService;
-import cine.pojos.Pelicula;
-import cine.pojos.SalaCine;
+import cine.Services.CineService;
+import cine.POJO.Pelicula;
+import cine.POJO.SalaCine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

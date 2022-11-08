@@ -1,4 +1,4 @@
-package cine.pojos;
+package cine.POJO;
 
 import lombok.Getter;
 import lombok.Setter;

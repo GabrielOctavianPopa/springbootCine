@@ -1,6 +1,6 @@
-package cine.repositorios;
+package cine.Repositories;
 
-import cine.pojos.SalaCine;
+import cine.POJO.SalaCine;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SalaCineRepository extends CrudRepository<SalaCine, Integer> {

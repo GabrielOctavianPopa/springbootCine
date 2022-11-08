@@ -1,9 +1,9 @@
-package cine.servicios;
+package cine.Services;
 
-import cine.pojos.Pelicula;
-import cine.repositorios.PeliculasRepository;
-import cine.pojos.SalaCine;
-import cine.repositorios.SalaCineRepository;
+import cine.POJO.Pelicula;
+import cine.Repositories.PeliculasRepository;
+import cine.POJO.SalaCine;
+import cine.Repositories.SalaCineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

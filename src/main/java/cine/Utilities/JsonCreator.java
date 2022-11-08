@@ -1,4 +1,4 @@
-package cine.utilidades;
+package cine.Utilities;
 
 import com.github.javafaker.Faker;
 
