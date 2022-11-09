@@ -20,19 +20,17 @@ function addMovie() {
         })
     })
         .then(response => response.text())
-        .then(result => notify(result))
+        .then(result => notify("Pelicula añadida correctamente"))
 }
 
 function clean() {
-    <!-- Delete the contents from the form -->
     document.getElementById("titulo").value = "";
     document.getElementById("director").value = "";
     document.getElementById("año").value = "";
     document.getElementById("duracion").value = "";
     document.getElementById("genero").value = "";
-    notify("borrados")
 }
 
 function notify(message) {
-    document.getElementById("errormsg").innerHTML = message;
+    alert(message);
 }
