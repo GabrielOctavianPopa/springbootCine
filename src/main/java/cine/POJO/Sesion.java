@@ -9,11 +9,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "sesiones")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "sesiones")
 public class Sesion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,8 +23,10 @@ public class Sesion implements Serializable {
     private String hora;
     @Column(name = "Fecha")
     private String fecha;
-    @Column(name = "IdSala")
-    private String sala;
-    @Column(name = "IdPelicula")
-    private String pelicula;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "IdPelicula")
+    private Pelicula pelicula;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "IdSala")
+    private SalaCine salaCine;
 }

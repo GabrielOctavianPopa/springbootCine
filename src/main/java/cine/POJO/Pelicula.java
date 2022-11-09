@@ -9,11 +9,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "peliculas")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "peliculas")
 public class Pelicula implements Serializable {
     @Id
     @Column(name = "IdPelicula")
