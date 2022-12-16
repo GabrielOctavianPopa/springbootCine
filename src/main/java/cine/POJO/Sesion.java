@@ -18,7 +18,7 @@ public class Sesion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "IdSession")
-    private Integer id;
+    private Integer IdSession;
     @Column(name = "Hora")
     private String hora;
     @Column(name = "Fecha")

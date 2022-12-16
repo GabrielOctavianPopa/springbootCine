@@ -16,9 +16,9 @@ import java.io.Serializable;
 @Table(name = "peliculas")
 public class Pelicula implements Serializable {
     @Id
-    @Column(name = "IdPelicula")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Column(name = "IdPelicula")
+    private Integer IdPelicula;
     @Column(name = "Titulo")
     private String titulo;
     @Column(name = "Director")
