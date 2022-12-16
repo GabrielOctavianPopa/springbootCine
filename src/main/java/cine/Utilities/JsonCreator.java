@@ -12,23 +12,31 @@ import java.util.Scanner;
 
 public class JsonCreator {
     public static void main(String[] args) {
-        //preguntar al usuario que quiere crear, peliculas o salas, y cuantas
-
-        //ejecutar el metodo correspondiente
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What do you want to create? (1 for movies, 2 for cinema rooms)");
+        System.out.println("¿Qué quieres crear?)");
+        System.out.println("1. Película");
+        System.out.println("2. Sala");
+        System.out.println("3. Sesion");
         int option = scanner.nextInt();
-        System.out.println("How many do you want to create?");
+        System.out.println("¿Cuántos quieres crear?)");
         int num = scanner.nextInt();
         if (option == 1) {
-            crearRandomJsonPelicula(num);
+            System.out.println(crearRandomJsonPelicula(num));
         } else if (option == 2) {
-            crearRandomJsonSala(num);
-        } else {
-            System.out.println("Invalid option");
+            System.out.println(crearRandomJsonSala(num));
+        } else if (option == 3) {
+            System.out.println(crearRandomJsonSesion(num));
+        } else{
+            System.out.println("Opción no válida");
         }
     }
 
+    /**
+     * Crea un json aleatorio de peliculas con el número de peliculas que se le pasa por parametro
+     *
+     * @param numPeliculas numero de peliculas que se quieren crear
+     * @return json con las peliculas
+     */
     public static List crearRandomJsonPelicula(int numPeliculas){
         Faker faker = new Faker();
         Gson gson = new Gson();
@@ -49,6 +57,12 @@ public class JsonCreator {
         return elementos;
     }
 
+    /**
+     * Crea un json aleatorio de salas con el número de salas que se le pasa por parametro
+     *
+     * @param numSalas numero de salas que se quieren crear
+     * @return json con las salas
+     */
     public static List crearRandomJsonSala(int numSalas){
         Faker faker = new Faker();
         Gson gson = new Gson();
@@ -67,6 +81,34 @@ public class JsonCreator {
         return elementos;
     }
 
+    /**
+     * Crea un json aleatorio de sesiones con el número de sesiones que se le pasa por parametro
+     * @param numSesiones numero de sesiones que se quieren crear
+     * @return json con las sesiones
+     */
+    public static List crearRandomJsonSesion(int numSesiones){
+        Faker faker = new Faker();
+        Gson gson = new Gson();
+        List<String> elementos = new ArrayList<>();
+        Map<String, String> sesiones = new HashMap<>();
+        for (int i = 1; i <= numSesiones; i++) {
+            //la id tiene que ser de esta manera "SES" + ****;
+            sesiones.put("id", "SES" + String.format("%04d", i));
+            // Generar datos aleatorios
+            sesiones.put("hora", String.valueOf(faker.number().numberBetween(0, 23)));
+            sesiones.put("minutos", String.valueOf(faker.number().numberBetween(0, 59)));
+            sesiones.put("dia", String.valueOf(faker.number().numberBetween(1, 31)));
+            sesiones.put("mes", String.valueOf(faker.number().numberBetween(1, 12)));
+            sesiones.put("año", String.valueOf(faker.number().numberBetween(2021, 2022)));
+            //añadir sala a la lista
+            elementos.add(gson.toJson(sesiones));
+        }
+        return elementos;
+    }
+
+    /**
+     * Crea un json aleatorio de sesiones con el número de sesiones que se le pasa por parametro
+     */
     public void crearRandomJsonDebugMode(){
         Faker faker = new Faker();
         Gson gson = new Gson();
