@@ -35,4 +35,6 @@ public class CineService {
         salaCineRepository.findAll().forEach(salas::add);
         return salas;
     }
+
+
 }

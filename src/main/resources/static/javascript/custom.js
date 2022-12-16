@@ -1,3 +1,4 @@
+//Funciones de añadir elementos y relacionados
 function addMovie() {
     var ititulo = document.getElementById("titulo").value;
     var idirector = document.getElementById("director").value;

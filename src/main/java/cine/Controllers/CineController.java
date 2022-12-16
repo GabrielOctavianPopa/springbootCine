@@ -35,6 +35,11 @@ public class CineController {
         return cineService.getAllSalas();
     }
 
+//    @GetMapping(path = "/random-json{num}") //num goes from 1 to 2, 1 being movies and 2 being cinema rooms
+//    public @ResponseBody String executeJsonCreator() {
+//        return cineService.executeJsonCreator();
+//    }
+
 
 }
 
