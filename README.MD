@@ -1,24 +1,25 @@
-Antes de empezar:
-- Tener un IDE para poder ejecutar el proyecto (Yo uso IntelliJ.
-- Tener instalado [Java](https://www.java.com/es/download/) (Yo uso java 18).
-- Tener instalado [XAMPP](https://www.apachefriends.org/es/index.html) para poder ejecutar la base de datos.
+## Antes de empezar
+- Instale un IDE (por ejemplo, IntelliJ) para ejecutar el proyecto.
+- Instale [Java](https://www.java.com/es/download/) (recomiendo usar Java 18).
+- Instale [XAMPP](https://www.apachefriends.org/es/index.html) para ejecutar la base de datos.
 
 Para ejecutar el proyecto:
-- Abrir el proyecto en el IDE.
-- Abrir XAMPP y ejecutar Apache y MySQL.
-- Abrir el navegador y poner la siguiente URL: http://localhost/phpmyadmin/
-- Crear una base de datos llamada "cine2".
-- En el IDE, ejecutar el proyecto.
-- En el navegador, poner la siguiente URL: http://localhost:8080/swagger-ui.html
+1. Abra el proyecto en su IDE elegido.
+2. Abra XAMPP y inicie los servidores Apache y MySQL.
+3. Abra un navegador web y vaya a la siguiente URL: http://localhost/phpmyadmin/
+4. Cree una nueva base de datos llamada "cine2".
+5. En el IDE, ejecute el proyecto.
+6. En el navegador web, vaya a la siguiente URL: http://localhost:8080/swagger-ui.html
 
-Como usar el proyecto:
-- En la interfaz de Swagger podemos ver los diferentes endpoints que tenemos disponibles.
+## Usando el proyecto
 
-Como usar los endpoints de tipo POST:
-- Para poder usarlos desplegamos el endpoint y pulsamos en "Try it out".
-- En el campo "Request body" escribimos el JSON que queremos enviar.
-- Pulsamos en "Execute" y nos devolverá el resultado.
+La interfaz de Swagger le mostrará los diferentes EndPoints disponibles.
 
-Como usar los endpoints de tipo GET:
-- Para poder usarlos desplegamos el endpoint y pulsamos en "Try it out".
-- Pulsamos en "Execute" y nos devolverá el resultado.
+Para usar los EndPoints de tipo POST:
+1. Despliegue el endpoint y haga clic en "Try it out".
+2. En el campo "Request body", ingrese el JSON que desea enviar.
+3. Haga clic en "Execute" para ver el resultado.
+
+Para usar los EndPoints de tipo GET:
+1. Despliegue el endpoint y haga clic en "Try it out".
+2. Haga clic en "Execute" para ver el resultado.
