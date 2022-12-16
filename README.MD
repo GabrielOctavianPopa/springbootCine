@@ -11,7 +11,7 @@ Para ejecutar el proyecto:
 5. En el IDE, ejecute el proyecto.
 6. En el navegador web, vaya a la siguiente URL: http://localhost:8080/swagger-ui.html
 
-## Usando el proyecto
+## Como usar el proyecto
 
 La interfaz de Swagger le mostrará los diferentes EndPoints disponibles.
 
