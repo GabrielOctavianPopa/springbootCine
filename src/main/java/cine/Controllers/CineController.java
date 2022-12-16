@@ -1,5 +1,6 @@
 package cine.Controllers;
 
+import cine.POJO.Sesion;
 import cine.Services.CineService;
 import cine.POJO.Pelicula;
 import cine.POJO.SalaCine;
@@ -33,6 +34,17 @@ public class CineController {
     @GetMapping(path = "/all-cinema-rooms")
     public @ResponseBody Iterable<SalaCine> getAllSalas() {
         return cineService.getAllSalas();
+    }
+
+    @PostMapping(path = "add-session")
+    public @ResponseBody String addNewSesion(@RequestBody Sesion sesion) {
+        cineService.addSesion(sesion);
+        return "Saved";
+    }
+
+    @GetMapping(path = "/all-sessions")
+    public @ResponseBody Iterable<Sesion> getAllSesiones() {
+        return cineService.getAllSesiones();
     }
 }
 
